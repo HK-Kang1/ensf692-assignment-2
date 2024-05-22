@@ -20,8 +20,13 @@ class Sensor:
         self.veh_status = 'no'
         
 
-    # The function update_status() updates the light, pedestrian, and vechicle status
-    # based on what the user inputs
+    # The function update_status() updates the light, pedestrian, and vechicle status based on what the user inputs.
+    #
+    # Prompts the user to input changes for the light, pedestrian, or vehicle status, and updates
+    # the respective attributes accordingly. 
+    #
+    # It takes the object of class Sensor as the argument and returns the current status and 
+    # action message based on the updated values. 
     def update_status(self): # You may decide how to implement the arguments for this function
         update_option = ''
         while update_option != '0': #while the user does not select 0, the menu is repeated
@@ -83,8 +88,11 @@ Select 1 for light, 2 for pedestrian, 3 for vehicle, or 0 to end program: ")
          
 # The sensor object should be passed to this function to print the action message and current status
 # Replace these comments with your function commenting
-# The function, print_message(), prints the action message and the current status of the Sensor
-# the parameter is sensor and the argument going to be passed is an object of the class Sensor
+#
+# This function prints the action message and the current status of the Sensor
+# The parameter is sensor and the argument going to be passed is an object of the class Sensor
+# It returns an action message ("Proceed", "Caution", or "STOP") based on the current light, pedestrian, and vehicle status
+# It also prints the current status of the traffic light, pedestrian, and vehicle.
 def print_message(sensor):
     if(sensor.light_status == 'green' and sensor.ped_status == 'no' and sensor.veh_status == 'no'):
         print("\nProceed")
@@ -96,7 +104,8 @@ def print_message(sensor):
 
 
 # Complete the main function below
-# The main function creates a sensor object and runs the Sensor class methods
+# The main function creates/initializes a Sensor object and calls the Sensor class methods,
+# which updates and displays the sensor statuses based on user input
 def main():
     print("\n***ENSF 692 Car Vision Detector Processing Program***\n")
     
