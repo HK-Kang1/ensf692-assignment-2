@@ -110,7 +110,7 @@ def main():
     print("\n***ENSF 692 Car Vision Detector Processing Program***\n")
     
     user_selection = Sensor() #creating a sensor object
-    user_selection.update_status() 
+    user_selection.update_status() #calling update_status() method 
 
 
 # Conventional Python code for running main within a larger program
